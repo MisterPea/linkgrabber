@@ -1,7 +1,38 @@
-### Hello ###
+# <img src="images/link_go_32.png" alt="Linkfink icon" width="25" height="25" /> Linkfink  #
 
-Linkfink is an extension for Google Chrome that extracts links from an
-HTML page and displays them in another tab.
+
+Linkfink is a Chrome extension that extracts every hyperlink
+from the current page and lists them in a new tab, so you can scan, filter,
+and open them in bulk.
+
+### Features ###
+
+- One-click link extraction from the active tab via the toolbar button
+- Preset filter options for:
+  - Text-fragment links (`#:~:text=`)
+  - Same-origin
+  - Same-origin sub-domain
+  - Duplicate links
+- Supports user-specified url block list
+- When opening links, user can choose whether links open in new tabs or new windows
+- Light / Dark / Auto color mode
+- Works in Incognito windows (split mode)
+
+### Development ###
+
+Requires Node.js. Install dependencies with `npm install`.
+
+- `npm run build` — typecheck and build (`js/`, compiled styles)
+- `npm run watch` — rebuild on file changes
+- `make package` — build and zip the extension into `dist/linkfink.zip`
+- `make lint` — run ESLint over `src`
+
+Source lives in `src/` (TypeScript/React + SCSS), compiling to `js/` and
+`style/`. To load the unpacked extension in Chrome: run a build, then go to
+`chrome://extensions`, enable Developer Mode, and "Load unpacked" pointing
+at this repository's root.
+
+See [CHANGELOG.md](CHANGELOG.md) for release history.
 
 ### Fork ###
 
